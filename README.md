@@ -1,4 +1,4 @@
-#StarCraft Project: Dynamic Army Prediction
+# StarCraft Project: Dynamic Army Prediction
 
 ---
 
@@ -13,7 +13,7 @@
 
 ---
 
-###Introduction
+### Introduction
 
 Our goal is to predict the enemy’s army formation by scouting and using the
 gathered information about the number of buildings, construction units, and
@@ -22,7 +22,7 @@ them, they can make a better strategic decision about how to beat their
 opponent.
 
 
-###Aspiration
+### Aspiration
 
 A dynamic army prediction algorithm could ultimately be utilized by gameplay
 bots in real games. Since the algorithm was built to observe general features
@@ -31,7 +31,7 @@ first, it can be easily trained to predict the actions of opponents in
 different factions.
 
 
-###Plan
+### Plan
 
 To make our methods understandable and approachable, we mainly use linear
 regression as a statistical approach to analyze the relationship between every
