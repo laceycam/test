@@ -1,8 +1,8 @@
-# StarCraft Project: Dynamic Army Prediction
+# StarCraft Project: Tactical Path Planning for Reconnaissance
 
 ---
 
-| Name             | email                    | SID       |
+| Group Member     | Email Address            | SID       |
 | ---------------- | ------------------------ | --------- |
 | Jiehong Jiang    | jjhjiang@ucdavis.edu     | 914974552 |
 | Colin Beardshear | crbeardshear@ucdavis.edu | 914385840 |
@@ -15,11 +15,25 @@
 
 ### Introduction
 
-Our goal is to predict the enemy’s army formation by scouting and using the
-gathered information about the number of buildings, construction units, and
-army units they have. If the player can correctly predict what’s coming for
-them, they can make a better strategic decision about how to beat their
-opponent.
+StarCraft II is a RTS game where players gather resources and strategically
+spend them on units, buildings, and research in order to achieve the ultimate
+goal of overpowering the opponent and winning.
+Because this game relies heavily on choosinf the right strategy early in the
+game, being able to predict the enemy's army formation becomes a very valuable
+skill.
+Current army prediction algorithms learn from data gathered from gameplays on
+build orders, amount of resources, and current army formation to predict which
+strategy the enemy is using.
+However, in addition to determining the strategy the enemy is using, being able
+to predict every specific build the enemy makes during certain periods of time
+during the game drastically increases the player’s chance of victory.
+If the player can correctly predict the exact units that are coming for them at
+specific times during the game, they can make better decisions on how to
+counter the enemy.
+Our objective is to create an algorithm that predicts the the enemy’s army
+composition given the information that’s been gathered by scouts, including
+construction units, buildings, and current army formation.
+We call this Dynamic Army Prediction.
 
 
 ### Aspiration
