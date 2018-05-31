@@ -41,42 +41,35 @@ utilize based on their army composition and information gathered from the
 scouts; however, there are no algorithms specifically aiming to predict what
 the enemy will build next based on the units they already possess, thus making
 our solution to the problem of army prediction unique.
-
 One such algorithm that predicts the enemy’s overall strategy rather than
 immediate builds is a Bayesian Model for Opening Prediction.
 This project predicts the enemy’s opening strategy and its possible technology
 trees; however, it differs from our approach in two main ways.
-
 First, the model predicts a strategy, whereas we focus on current army
 composition and, ultimately, future army composition.
-
 Secondly, it predicts the strategy at the beginning of the game, whereas as our
 solution is a dynamic/real time implementation.
-
 Another similar project is Combat Prediction based upon the Lanchester
 Attribution Laws.
-
 This project uses the above mentioned model to hypothesize about the enemy
 army’s combat strategies, technology, and resources.
-
 It addresses a much wider scope than our solution, and, unlike the previously
 stated project, Combat Prediction aims to work in real time.
 
 Link to enemy strategy prediction algorithm:
 
-https://hal.archives-ouvertes.fr/hal-00607277/file/OpeningPrediction.pdf(https://hal.archives-ouvertes.fr/hal-00607277/file/OpeningPrediction.pdf "Enemy Strategy Prediction Algorithm")
+[https://hal.archives-ouvertes.fr/hal-00607277/file/OpeningPrediction.pdf](https://hal.archives-ouvertes.fr/hal-00607277/file/OpeningPrediction.pdf "Enemy Strategy Prediction Algorithm")
+
+[https://hal.archives-ouvertes.fr/hal-00607277/file/OpeningPrediction.pdf]("Enemy Strategy Prediction Algorithm")
 
 Dynamic army prediction is a very interesting problem to solve because, to our
 knowledge, not many attempts have already been made to solve this specifically.
-
 Most prediction models focus on the overall strategy the enemy will utilize
 based on their opening build order, while we want to focus on immediate builds
 at any point during the game.
-
 This problem is also technically interesting because it is difficult to
 determine the relationships between every unit created as well determine how
 these relationships evolve as time progresses within the game.
-
 This requires a large amount of training and implementing approaches, such as
 linear regression.
 
