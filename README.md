@@ -14,7 +14,7 @@
 ---
 
 ## Introduction
-### Problem
+#### Problem
 
 StarCraft II is a RTS game where players gather resources and strategically
 spend them on units, buildings, and research in order to achieve the ultimate
@@ -60,8 +60,6 @@ Link to enemy strategy prediction algorithm:
 
 [https://hal.archives-ouvertes.fr/hal-00607277/file/OpeningPrediction.pdf](https://hal.archives-ouvertes.fr/hal-00607277/file/OpeningPrediction.pdf "Enemy Strategy Prediction Algorithm")
 
-[https://hal.archives-ouvertes.fr/hal-00607277/file/OpeningPrediction.pdf]("Enemy Strategy Prediction Algorithm")
-
 Dynamic army prediction is a very interesting problem to solve because, to our
 knowledge, not many attempts have already been made to solve this specifically.
 Most prediction models focus on the overall strategy the enemy will utilize
@@ -72,6 +70,55 @@ determine the relationships between every unit created as well determine how
 these relationships evolve as time progresses within the game.
 This requires a large amount of training and implementing approaches, such as
 linear regression.
+
+#### Possible AI Approaches
+
+A possible AI approach to this problem is creating a neural network to learn
+relationships between all the units created during different periods of the
+game.
+A neural network would not only allow us to find linear relationships, but also
+more complex higher order relationships between units.
+However, creating a neural network wouldn’t be feasible for this project
+because of the large data sets and extensive training they require.
+Another problem with using a neural network is its “black box” nature, where
+it’s unclear how and why a prediction was determined given certain input,
+making the logic hard to follow and evaluate.
+Another solution is creating a Bayesian network where each node, which in this
+case would be unit type, would have a probability associated with it depending
+on how far into the game the player was, to determine what units were most
+likely to be created next.
+This method would work better than the neural network, as they are less
+sensitive to smaller data sets and are more resistant to overfitting the data,
+therefore making them more efficient in rapidly changing environments such as
+StarCraft II.
+However, a Bayesian network would also be a difficult approach for our project
+because determining the conditional probabilities between nodes requires a
+large amount of training and computational power, neither of which we can
+accurately do within our timeframe.
+
+#### Design and Technical Approach
+
+We propose using Linear Regression or some other statistical model to predict
+the amounts of complementing units over time.
+For instance, Mutalisks and Zerglings are commonly used together, so we will
+form a regression model which predicts their exact correlation.
+In addition, we plan to use another model to dynamically predict the enemy’s
+army composition from the available data (obtained by scouting).
+In general, Linear Regression is effective for highly correlated data members.
+Thus, we believe using it for selected complementary units would result in
+accurate predictions of future unit builds.
+However, it may fall short in dynamic army prediction, since game unit
+compositions vary more widely during the later parts of the game.
+For instance, predicting based on buildings would be ineffective because both
+players are likely to have all of the buildings; late game scenarios diverge
+from generic build orders, creating a much larger problem space.
+As later in the game, a single model’s accuracy would decrease significantly,
+we propose using several separately calibrated models for the different
+partitions of game time.
+For example, minute 0-10, 10-20, 20-30 would have their own unique linear
+regression models for each unit pair.
+The partition boundaries may vary as we experiment with different partition
+sizes.
 
 ---
 
